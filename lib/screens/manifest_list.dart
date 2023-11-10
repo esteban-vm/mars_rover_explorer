@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ManifestList extends StatefulWidget {
   static const path = 'manifest';
@@ -19,7 +20,9 @@ class _ManifestListState extends State<ManifestList> {
         title: Text(widget.title),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Text(widget.roverName),
+      body: Text(
+        AppLocalizations.of(context)!.roverName(widget.roverName),
+      ),
     );
   }
 }
